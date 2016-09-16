@@ -1,0 +1,25 @@
+<h2> MEETUP </h2>
+  <p><%= @noerrormessage %></p>
+
+  <div><strong>Meetup name:</strong> <%= @meetupname %> </div>
+  <div><strong>Meetup location:</strong> <%= @meetuplocation %> </div>
+  <div><strong>Meetup detail:</strong> <%= @meetupdetail %> </div>
+
+  <div><strong>Meetup creator:</strong> <%= @creator.username %> </div>
+
+  <h4>Users for this meetup:</h4>
+  <ul>
+  <% if !@users_for_meetup.nil? %>
+    <% @users_for_meetup.each do |user| %>
+      <li><img class="image", src="<%= user.avatar_url %>"> <%= user.username %></li>
+    <% end %>
+  <% end %>
+  </ul>
+
+  <form action="/meetups/<%= @id %>" method="post">
+    <button name="button" value="button">Click here to join meetup!</button>
+  </form>
+
+
+  <p><%= @errormessage3 %></p>
+  <p><a href="/meetups">Homepage</a></p>

@@ -1,0 +1,16 @@
+<h3> Please Enter Meetup Information </h3>
+
+<form action="/meetups" method="post">
+  <p><label for="newmeetname">Name</label></p>
+  <p><input type="text" id="name" name="newmeetupname" value="<%= @newmeetupname %>"></p>
+  <p><label for="newmeetuplocation">Location</label></p>
+  <p><input type="text" id="location" name="newmeetuplocation" value="<%= @newmeetuplocation %>"></p>
+  <p><label for="newmeetupdetail">Detail</label></p>
+  <p><input type="text" id="detail" name="newmeetupdetail" value="<%= @newmeetupdetail %>"></p>
+  <p><input type="submit" value="submit"></p>
+</form>
+
+<div><%= @errormessage2 %></div>
+<div><%= @errormessage %></div>
+
+<p><a href="/meetups">Homepage</a></p>
